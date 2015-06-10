@@ -1,7 +1,7 @@
 # Yougular
 AngularJS x Youtube API
 
-[![Yougular screenshot](https://raw.github.com/ariellav/Yougular/tree/master/imgs/yougular-screenshot.png)]
+![Yougular screenshot](https://raw.github.com/ariellav/Yougular/master/imgs/yougular-screenshot.png)
 
 Features: 
 * Log in using google+ (sets up credentials needed to display youtube)
