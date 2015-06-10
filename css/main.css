@@ -1,0 +1,288 @@
+body {
+	font-family: 'Open Sans', sans-serif;	
+}
+
+body, li {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+div, span {
+	-webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;
+}
+
+a:visited { 
+	color: #fff;
+	text-decoration: none; 
+}
+
+.title {
+	display: block;
+	position: relative;
+	width: 100%;
+	text-align: center;
+	
+	font-family: 'Allura', sans-serif;
+	font-size: 40px;
+	margin: 40px 0 20px;
+	color: #3BBDCA;
+}
+
+/*  containers  */
+
+.container-login {
+	position: absolute;
+	top: 45px;
+	right: 20px;
+}
+
+.container-fb {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+
+.container {
+	width: 100%;
+	display: block;
+	float: left;
+	position: relative;
+	margin-left: 0;
+}
+
+.container-youtube {
+	text-align: center;
+	margin-top: 40px;
+	display: block;
+	position: relative;
+	float: left;
+	width: 100%;
+	height: auto;
+	border: 3px solid #ededed;
+	border-radius: 4px;
+	padding: 10px 8px;
+	margin: 4px;
+}
+
+.container-left {
+	display: block;
+	position: relative;
+	float: left;
+	width: 40%;
+}
+
+.container-right {
+	display: block;
+	position: relative;
+	float: left;
+	width: 60%;
+}
+
+/* login */
+
+.fb-btn {
+	float: right;
+}
+
+#fb-status {
+	float: right;
+	margin-right: 10px;
+	font-size: 12px;
+	line-height: 22px;
+}
+
+.google-btn {
+	padding: 5px;
+	border-radius: 3px;
+	background-color: #FA5858;
+	color: #fff;
+	font-size: 11px;
+	font-weight: 700;
+}
+
+.login-btn{
+	padding: 10px;
+	border-radius: 4px;
+	background-color: #eee;
+	color: #fff;
+}
+
+/*  search   */
+#search-input {
+	width: 50%;
+	background-color: #3BBDCA;
+	color: #fff;
+	border-radius: 18px;
+	height: 32px;
+	border: none;
+	font-size: 16px;
+	padding: 0 10px;
+}
+
+#search-button {
+	height: 33px;
+	box-shadow: none;
+	background-color: rgb(255, 255, 255);
+	color: rgb(59, 189, 202);
+	border-radius: 18px;
+	top: 0px;
+	line-height: 32px;
+	font-size: 16px;
+	border: 1px;
+	margin-left: 5px;
+}
+
+#search-button:hover { 
+	background-color: #ededed;
+	color: #fff;
+	cursor: pointer;
+}
+
+textarea:focus, input:focus{
+    outline: 0;
+}
+
+#search-box {
+	margin-bottom: 10px;
+}
+
+#search-results {
+	margin-right: 10px;
+}
+.result-row {
+	display: block;
+	float: left;
+	position: relative;
+	width: 100%;
+	border-bottom: 1px solid #ededed;
+	padding: 10px;
+}
+.result-row:hover {
+	background-color: #DFF5F7;
+	cursor: pointer;
+}
+
+.result-details {
+	float: right;
+	display: inline-block;
+	position: relative;
+	width: 76%;
+	text-align: left;
+	padding: 5px 0 5px 10px;
+}
+
+.result-img {
+	float: left;
+	display: inline-block;
+	position: relative;
+	width: 24%;
+}
+
+.result-title {
+	font-size: 14px;
+	font-weight: 600;
+	width: 100%;
+	display: block;
+}
+
+.result-description {
+	font-size: 12px;
+	color: #3BBDCA;
+}
+
+.result-add {
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	height: 30px;
+	width: 30px;
+	background-color: #3BBDCA;
+	color: #fff;
+	line-height: 30px;
+	font-weight: 600;
+	visibility: hidden;
+}
+
+.result-row:hover .result-add {
+	visibility: visible;
+}
+
+.result-add:hover {
+	background-color: #54C3CE;
+}
+
+/* 	playlist  */
+#playlist-title {
+	font-family: 'Allura', sans-serif;
+	font-size: 30px;
+	margin: 15px;
+	color: #ddd;
+}
+#player-details {
+	text-align: left;
+	width: 100%;
+	overflow: hidden;
+	display: block;
+	height: 30px;
+}
+#nowPlaying-text {
+	font-size: 18px;
+	font-weight: 600;
+	color: #333;
+}
+
+#current {
+	font-size: 18px;
+	color: #3BBDCA;
+}
+
+#upcoming {
+	border: 2px solid #ededed;
+	border-radius: 4px;
+}
+
+.item-row {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 50px;
+	border-bottom: 1px solid #fff;
+	background-color: #DFF5F7;
+}
+
+.item-row:hover {
+	background-color: #fff;
+	cursor: pointer;
+}
+
+.item-title {
+	float: left;
+	display: inline-block;
+	width: 90%;
+	
+	line-height: 48px;
+	text-align: left;
+	padding: 0 10px;
+}
+.item-delete {
+	float: right;
+	display: inline-block;
+	padding: 5px;
+	background-color: #3BBDCA;
+	color: #fff;
+	width: 10%;
+	height: 100%;
+	line-height: 38px;	
+	font-weight: 600;
+}
+.item-delete:hover {
+	background-color: #54C3CE;
+	cursor: pointer;
+}
+
+.youtubePlaylistContainer {
+	
+}

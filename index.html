@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="//www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Allura' rel='stylesheet' type='text/css'>
+		<script src="controller/mainController.js"></script>
+		<link rel="stylesheet" href="css/main.css">
+		<title>Yougular</title>
+    </head>
+	<body ng-app="Yougular">
+		<div ng-controller="MainController" class="container">
+
+			<div class="container-fb">
+					<fb:login-button scope="public_profile,email" onlogin="checkLoginState();" class="fb-btn"></fb:login-button>
+					<div id="fb-status"></div>
+			</div>
+			<div class="container-login">
+				<div class="container-google">
+					<div class="pre-auth google-btn">
+					  <a href="#" id="login-link"><b>G+</b> Log In</a>
+					</div>
+					<div class="post-auth google-btn" style="display:none;">
+					  <span>Logged into Google</span>
+					</div>	
+				</div>
+			</div>
+			
+			
+			<div class="title">{{title}}</div>
+			
+			
+			<div class="container-youtube">
+				
+				<div class="container-left">
+					<div id="search-box">
+				      <label>
+				      	<input id="search-input" value='cats' type="text"/>
+				      	<button id="search-button" disabled ng-click="search()">SEARCH</button>
+				      </label>
+				    </div>
+					<div id="search-results">
+				        <li data-ng-repeat="result in results">
+				          	<div class="result-row" data-ng-click="launch(result.id, result.title)">
+				          		<img ng-src="{{result.thumbnail}}" alt="" class="result-img"/>
+				          		<div class="result-details">
+					          		<span class="result-title">{{result.title}}</span>
+					          		<span class="result-description">{{result.title}}</span>
+				          		</div>
+				          		<div class="result-add" data-ng-click="add(result.id, result.title); $event.stopPropagation();">+</div>
+				          	</div>
+				        </li>
+				    </div>
+
+				</div>
+				
+				<div class="container-right">
+					<div id="player">
+					  <div id="placeholder"></div>
+					</div>
+					<div id="player-details">
+						<span id="nowPlaying-text">Now Playing: </span>
+						<span id="current">{{ youtube.videoTitle }}</span>
+					</div>
+					<div id="playlist">
+						<div id="playlist-title">Playlist</div>
+				      <div id="upcoming" data-ng-show="playlistShow">
+				        <li data-ng-repeat="item in playlist">
+				        	<div class="item-row">
+					          <span class="item-delete" data-ng-click="delete(item.id)">DELETE</span>
+					          <span class="item-title"  data-ng-click="launch(item.id, item.title)">{{item.title}}</span>
+					        </div>
+				        </li>
+				      </div>
+				    </div>
+				</div>
+
+
+			</div>
+		</div>
+    <script src="js/g_auth.js"></script>
+    <script src="js/fb_auth.js"></script>
+    <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script>
+	</body>
+</html>
