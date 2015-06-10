@@ -10,7 +10,7 @@
 		.config(function ($httpProvider) {
 	  		delete $httpProvider.defaults.headers.common['X-Requested-With'];
 		})
-		.service('YoutubeService', ['$window', '$rootScope', '$log', function ($window, $rootScope, $log) {
+		.service('YoutubeService', ['$window', '$rootScope', function ($window, $rootScope) {
 		
 			var service = this;
 			var results = [];
@@ -41,7 +41,7 @@
 		  	};
 		  
 		    function onYoutubeReady (event) {
-			    $log.info('YouTube Player is ready');
+			    console.log('Youtube is ready');
 		  	}
 		
 			function onYoutubeStateChange (event) {
@@ -57,7 +57,6 @@
 			}
 			  
 			this.bindPlayer = function (elementId) {
-				$log.info('Binding to ' + elementId);
 			    youtube.playerId = elementId;
 			};
 		
@@ -71,7 +70,6 @@
 			};
 		
 			this.createPlayer = function () {
-			    $log.info('Creating a new Youtube player for DOM id ' + youtube.playerId + ' and video ' + youtube.videoId);
 				return new YT.Player(youtube.playerId, {
 					height: youtube.playerHeight,
 					width: youtube.playerWidth,
@@ -113,7 +111,6 @@
 				      id: id,
 				      title: title
 				});
-				console.log(playlist);
 			  };
 			
 			  this.deleteVideo = function (id) {
@@ -132,7 +129,7 @@
 	
 	//MainController
 	
-	Yougular.controller('MainController', function($scope, $http, $log, YoutubeService){
+	Yougular.controller('MainController', function($scope, $http, YoutubeService){
 		
 		$scope.title= 'Yougular';
 		
