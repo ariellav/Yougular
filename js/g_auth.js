@@ -51,6 +51,8 @@ function loadAPIClientInterfaces() {
   gapi.client.load('youtube', 'v3', function() {
     handleAPILoaded();
   });
+  gapi.client.load('youtubePartner', 'v1', function() {});
+  //gapi.client.load('youtube.force-ssl', function() {});
 }
 
 function handleAPILoaded() {

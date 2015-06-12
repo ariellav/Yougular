@@ -28,9 +28,7 @@
 					</div>	
 			</div>
 			
-			
 			<div class="title">{{title}}</div>
-			
 			
 			<div class="container-youtube">
 				
@@ -53,7 +51,7 @@
 				          	</div>
 				        </li>
 				    </div>
-
+					<div id="search-error"></div>
 				</div>
 				
 				<div class="container-right">
@@ -64,17 +62,40 @@
 						<span id="nowPlaying-text">Now Playing: </span>
 						<span id="current">{{ youtube.videoTitle }}</span>
 					</div>
-					<div id="playlist">
-						<div id="playlist-title">Playlist</div>
-				      <div id="upcoming" data-ng-show="playlistShow">
+					
+				    <div id="playlist-title">Playlist</div>
+				    <div id="playlist-btns">
+				    	<!-- <div class="btn" ng-click="test()">
+					    	TEST
+					    </div> -->
+				    	<div class="btn" ng-click="getPlaylist(0)">
+					    	Favorites
+					    </div>
+					    <div class="btn" ng-click="getPlaylist(1)">
+					    	Likes
+					    </div>
+					    <div class="btn" ng-click="getPlaylist(2)">
+					    	Uploads
+					    </div>
+				    	<div class="btn" ng-click="getPlaylist(3)">
+					    	Watch History
+					    </div>
+					    <div class="btn" ng-click="getPlaylist(4)">
+					    	Watch Later
+					    </div>
+				    </div>
+				    <div id="container-playlist">
+				    <div id="playlist" data-ng-show="playlistShow">
+				    	<div id="playlist-noresult"></div>
 				        <li data-ng-repeat="item in playlist">
 				        	<div class="item-row">
 					          <span class="item-delete" data-ng-click="delete(item.id)">DELETE</span>
 					          <span class="item-title"  data-ng-click="launch(item.id, item.title)">{{item.title}}</span>
 					        </div>
 				        </li>
-				      </div>
 				    </div>
+				    </div>
+				    
 				</div>
 
 

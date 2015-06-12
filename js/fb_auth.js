@@ -61,8 +61,9 @@
   // successful.  See statusChangeCallback() for when this call is made.
   function testAPI() {
     FB.api('/me', function(response) {
+      $('.fb-btn').hide();
       console.log('Successful login for: ' + response.name);
       document.getElementById('fb-status').innerHTML =
-        'Thanks for logging in, ' + response.name + '!';
+        'Logged into FB - ' + response.name;
     });
   }
