@@ -20,7 +20,7 @@ AngularJS x Youtube API
   * Log in using google+ (OAuth2 needed for Youtube cred.)
   * Displays a Youtube video
   * Lists out top 5 results from search bar
-  * ~Pregenerates a playlist of 4 videos~
+  * ~~Pregenerates a playlist of 4 videos~~
   * Add to current playlist from search results
   * Delete from playlist
   * Click on rows to play music
