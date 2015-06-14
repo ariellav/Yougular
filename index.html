@@ -90,7 +90,7 @@
 				        <li data-ng-repeat="item in playlist">
 				        	<div class="item-row">
 					          <span class="item-delete" data-ng-click="delete(item.id)">DELETE</span>
-					          <span class="item-title"  data-ng-click="launch(item.id, item.title)">{{item.title}}</span>
+					          <span class="item-title"  data-ng-click="launch(item.resourceId.videoId, item.title)">{{item.title}}</span>
 					        </div>
 				        </li>
 				    </div>
