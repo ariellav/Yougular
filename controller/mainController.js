@@ -125,6 +125,7 @@
 			  };
 			  
 			  this.requestVideoPlaylist = function(playlistId) {
+			  	  $('#search-error').html('');
 			  	  current = playlistId;
 			  	  playlist.length = 0;
 				  var requestOptions = {
@@ -162,11 +163,16 @@
 			             }
 					  });
 				  	request.execute(function(response) {
-				  		if (response.code = 403)
+				  		if (!current)
+				  			$('#search-error').html('Please select a playlist');
+				  		else if (response.code == 403){
 				  			$('#search-error').html('Playlist is full');
-				  			
-					    console.log(response);
-					    $rootScope.$apply();
+				  		}
+				  		else {
+				  			$('#search-error').html('');
+					  		playlist.push(response.snippet);
+						    $rootScope.$apply();
+					   }
 					});
 			  };
 			
