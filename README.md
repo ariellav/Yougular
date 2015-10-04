@@ -6,39 +6,12 @@ AngularJS x Youtube API
 ##Notes: 
   * For use, need OAUTH2_CLIENT_ID in js/g_auth.js
 
-##V 2.0
-  
-  Updates: 
-  * Added buttons to select default playlists from google+ account.
-  * Playlist options: Favorites, Likes, Uploads, Watch History, & Watch Later.
-  * Fixed double click on search bug.
-  * Fixed a couple styling bugs. 
-  * Add button now adds directly to youtube playlist
-  * Delete only removes the playlist row and does not alter the personal youtube playlist. 
-
   Features:
   * Log in using google+ (OAuth2 needed for Youtube cred.)
-  * Displays a Youtube video
+  * Displays a YouTube video
   * Lists out top 5 results from search bar
   * ~~Pregenerates a playlist of 4 videos~~
-  * Add to current playlist from search results
-  * Delete from playlist
-  * Click on rows to play music
-  * Karma unit testing
-  * Responsive
-
-##V 1.0
-
-  Features: 
-  * Log in using google+ (OAuth2 needed for Youtube cred.)
-  * Displays a Youtube video
-  * Lists out top 5 results from search bar
-  * Pregenerates a playlist of 4 videos
-  * Add to current playlist from search results
-  * Delete from playlist
-  * Click on rows to play music
-  * Karma unit testing
-  * Responsive
-  
-  Bug: 
-  * Need to click "Search" button twice on first search
+  * Buttons select default playlists from google+ account (Favorites, Likes, Uploads, Watch History, & Watch Later)
+  * Add button adds directly to your desired YouTube playlist
+  * Delete from playlist ( only locally. this function does not alter the personal youtube playlist. )
+  * Click on rows from either table to play music
